@@ -1,0 +1,57 @@
+<div>
+    <h1> {{name}} </h1>
+</div>
+<div>
+    {{#each users}}
+    <br>
+    <hr>
+    <b> User:</b>({{id}})
+    <br>
+    {{name}}
+    <br>
+    ({{gender}})
+    {{age}} - year
+    <hr>
+    <div>
+        <b>Friends:</b>
+        {{#each friends}}
+        ({{id}}) {{name}} {{gender}} {{age}}
+        <div>
+            <b>Mutual friends:</b>
+            {{#each mutual_friends}}
+            <br>
+            ({{id}}) {{name}}, <br>({{gender}}), {{age}},
+            {{#each mutual_friends}}
+            <br>
+            ({{id}}) {{name}}, <br>({{gender}}), {{age}},
+            {{/each}}
+            {{/each}}
+        </div>
+        {{#if groups}} <b>Groups fiends:</b> {{/if}}
+        {{#each groups}}
+        <br>
+        ({{id}}) {{name}}
+        <br>
+        {{description}}
+        <br>
+        <b>Members:</b>
+        {{#each members}}
+        ({{id}})
+        {{name}}
+        ({{gender}})
+        {{age}} - year
+        {{/each}}
+        {{/each}}
+
+        {{/each}}
+    </div>
+    {{#if groups}} <b>Groups:</b> {{/if}}
+    {{#each groups}}
+    <br>
+    ({{id}}) {{name}}
+    <br>
+    {{description}}
+
+    {{/each}}
+    {{/each}}
+</div>
