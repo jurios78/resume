@@ -814,12 +814,17 @@ router.get('/facebook', function (req, res) {
                     name: 'John Smith',
                     gender: 'Male',
                     age: 33,
-                  },
+                   },
                 ],
               },
             ],
           },
         ],
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -903,7 +908,10 @@ router.get('/mac', function (req, res) {
           price: 19.99,
         },
       ],
-=======
+    },
+  })
+ })
+
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
