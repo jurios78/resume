@@ -1,0 +1,79 @@
+<div>
+    <h1> {{name}} </h1>
+    {{description}}
+    <br>
+    <b>Price: {{price}} </b>
+    <br>
+    <b> Category:</b> {{category}}
+</div>
+<hr>
+<div>
+    <h3>Features:</h3>
+    {{#with features}}
+    {{#with processor}}
+    <b>Processor:</b>
+    {{brand}} {{model}},
+
+    {{speed}},
+
+    Cores: {{cores}} ({{cache}})
+    {{/with}}
+    <br>
+    <b>Memory:</b>
+    {{#with memory}}
+    {{type}}, {{size}}, {{speed}}
+    {{/with}}
+    <br>
+    <b>Storage:</b>
+    {{#with storage}}
+    {{type}}, {{size}}
+    {{/with}}
+    <br>
+    <b>Display:</b>
+    {{#with display}}
+    {{size}}, {{resolution}}, {{technology}}, {{color_space}}, {{brightness}}, {{refresh_rate}}
+    {{/with}}
+    <br>
+    <b>Graphics:</b>
+    {{#with graphics}}
+    {{brand}}, {{model}}, {{memory}}
+    {{/with}}
+    <br>
+    <b>Ports:</b>
+    {{#each ports}}
+    <li>{{type}},({{count}}) </li>
+    <br>
+    {{#each features}}
+    <li>{{this}}</li>
+    <br>
+    {{/each}}
+
+    {{/each}}
+    <b>Battery:</b>
+    {{#with battery}}
+    {{type}}, {{capacity}}, {{life}}
+    {{/with}}
+    <br>
+    <b>Weight:</b>
+    {{weight}}
+    <br>
+    <b>Dimensions:</b>
+    {{#with dimensions}}
+    <ul>height: {{height}}</ul>
+    <ul>width: {{width}}</ul>
+    <ul>depth: {{depth}}</ul>
+    {{/with}}
+    <br>
+    <b>Operating system:</b>
+    {{operating_system}}
+    <hr>
+    <b>Accessories</b>
+    <br>
+    {{#each accessories}}
+    {{name}} -
+    {{price}}
+    <br>
+    {{/each}}
+
+    {{/with}}
+</div>
