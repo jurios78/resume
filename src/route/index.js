@@ -723,8 +723,6 @@ router.get('/task22', function (req, res) {
         },
       },
     },
-=======
-
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
