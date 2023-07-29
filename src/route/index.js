@@ -666,8 +666,6 @@ router.get('/web', function (req, res) {
   })
 })
 
-
-
 router.get('/task22', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -718,14 +716,13 @@ router.get('/task22', function (req, res) {
           detail: {
             text: 'By using or accessing the service, you agree to be bound by the terms and conditions outlined in the agreement.',
             button: 'Аccept',
-         },
+          },
         },
       },
     },
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-    
 
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -789,13 +786,12 @@ router.get('/task21', function (req, res) {
         {
           text: 'Bootstrap',
           url: 'https://getbootstrap.com/',
-         },
+        },
       ],
     },
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -942,7 +938,7 @@ router.get('/facebook', function (req, res) {
                     name: 'John Smith',
                     gender: 'Male',
                     age: 33,
-                   },
+                  },
                 ],
               },
             ],
@@ -1038,7 +1034,7 @@ router.get('/mac', function (req, res) {
       ],
     },
   })
- })
+})
 
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1113,13 +1109,11 @@ router.get('/js', function (req, res) {
       {
         name: 'CSS-Tricks',
         type: 'blog',
-
       },
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1215,11 +1209,17 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
-
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+router.get('/bootstrap', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap', {
+    layout: 'bootstrap',
+  })
+  // ↙ сюди вводимо JSON дані
+})
 // ===================================
 // Підключаємо роутер до бек-енду
 module.exports = router
