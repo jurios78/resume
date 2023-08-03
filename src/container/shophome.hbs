@@ -121,14 +121,16 @@
     </section>
     <hr class="m-5">
     <footer>
-        <div class="nav">
-            <div class="nav-item">
-                {{#each footer}}
+       <div class="nav">
+            {{#each footer}}
+            <div class="col-2">
                 {{#each this}}
-                <a href="{{link}}" class="btn btn-link">{{text}}</a>
-                {{/each}}
+                <div class="nav-item">
+                    <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{link}}">{{text}}</a>
+                </div>
                 {{/each}}
             </div>
+            {{/each}}
         </div>
 
     </footer>
