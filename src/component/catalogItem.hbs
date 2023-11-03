@@ -1,0 +1,36 @@
+
+
+    
+      <div class="card mt-5">
+        <img class="card-img" src={{img}}>
+        <div class="card-body">
+          <span class="badge text-bg-warning rounded-pill me-3">{{#if isHot}}Hot{{/if}}</span>
+          <span class="badge text-bg-primary rounded-pill">{{#if isNew}}Нове{{/if}}</span>
+          <br>
+          <span class="badge text-bg-secondary mt-3">{{#if isFast}}Безкоштовна доставка{{/if}}</span><br>
+          <span class="badge text-bg-success mt-3">{{#if isFree}}Швидка доставка{{/if}}</span>
+          <div>
+          <h3 class="mt-3">{{name}}</h3>
+          </div>
+          {{#with review}}
+          {{amount}}
+          {{text}}
+          {{/with}}
+          <h2>{{price}}</h2>
+          <div>
+            {{delivery}}
+          </div>
+          {{#each buttons}}
+          <br>
+          <a href="{{link}}"
+          class="{{#if isPrimary}}btn btn-primary {{/if}} {{#if isSecondary}} btn btn-secondary {{/if}} m-2">{{text}}</a>
+          {{/each}}
+          {{#each characteristics}}
+          <li>
+            {{title}}
+            {{value}}
+          </li>
+          {{/each}}
+        </div>
+      </div>
+   
